@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Hiển thị 20 số chia hết cho 2 và 3 từ số 19<br><br>
+<input type="submit" value=" Tìm" onclick="indayso()">
+<p > Hiển thị:</p>
+<p id="hienthi"></p>
+<script>
+    function checkchiahet2(number){
+        if (number % 2 ==0)
+            return 1;
+        else
+            return 0 ;
+    }
+    function checkchiahet3(number){
+        if (number % 3 ==0)
+            return 1;
+        else
+            return 0 ;
+    }
+    function indayso(){
+        let i=19, str=" ";
+        let dem=0
+        while ( dem< 20){
+            if ((checkchiahet2(i) == 1) && (checkchiahet3(i)==1))
+                {
+                dem +=1;
+                str += i +", ";
+            }
+            i++;
+        }
+        document.querySelector("#hienthi").innerHTML=str;
+    }
+</script>
+</body>
+</html>

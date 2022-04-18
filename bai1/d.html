@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào năm:<br>
+<input id="nhapnam" type="inputnam">
+<input type="submit" value="Tìm" onclick="intheky()">
+<p id="ketqua">Thế kỷ của năm là:</p>
+<script>
+    function intheky() {
+        let nam = parseInt(document.querySelector("#nhapnam").value);
+        let theKy;
+        if (nam % 100 == 0) {
+            theKy = parseInt(nam / 100);
+        } else {
+            theKy = parseInt(nam / 100 + 1);
+        }
+        document.querySelector("#ketqua").innerHTML = "Thế kỷ của năm là: " + theKy
+    }
+</script>
+</body>
+</html>

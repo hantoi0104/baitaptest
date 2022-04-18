@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào a:<br>
+<input id="inputA" type="text"><br>
+Nhập vào b:<br>
+<input id="inputB" type="text"><br>
+<input type="submit" value="Hiển thị" onclick="tinhToan()">
+<p id="ketQua1">Kết quả a^2=</p>
+<p id="ketQua2">Kết quả a^b=</p>
+<script>
+    function tinhToan(){
+        let a= document.querySelector("#inputA").value;
+        let b= document.querySelector("#inputB").value;
+        let binhphuong= a**2;
+        let amub= a**b;
+        document.querySelector("#ketQua1").innerHTML = "Kết quả a^2 = "+ binhphuong;
+        document.querySelector("#ketQua2").innerHTML = "Kết quả a^b = " + amub;
+    }
+</script>
+</body>
+</html>

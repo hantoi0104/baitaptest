@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào cạnh a:<br>
+<input id="inputA" type="text"><br>
+Nhập vào cạnh b:<br>
+<input id="inputB" type="text"><br>
+Nhập vào cạnh c:<br>
+<input id="inputC" type="text"><br>
+<input type="submit" value="Hiển thị" onclick="hienThi()">
+<p id="ketQua1">Kết quả=</p>
+<script>
+    function hienThi() {
+        let a = parseInt(document.querySelector("#inputA").value)
+        let b = parseInt(document.querySelector("#inputB").value)
+        let c = parseInt(document.querySelector("#inputC").value)
+        if ((a >= b + c) || (b >= c + a) || (c >= a + b))
+            document.querySelector("#ketQua1").innerHTML=" Đây không phải là tam giác"
+    else
+        if (a == b && b == c && a == c)
+            document.querySelector("#ketQua1").innerHTML = " Đây là tam giác đều"
+        else if ((a == b) || (b == c) || (c == a)) {
+            document.querySelector("#ketQua1").innerHTML = " Đây là tam giác cân"
+        } else if ((a * a == b * b + c * c) || (b * b == c * c + a * a) || (c * c == a * a + b * b)) {
+            document.querySelector("#ketQua1").innerHTML = " Đây là tam giác vuông"
+        }
+    }
+
+</script>
+</body>
+</html>
